@@ -1,0 +1,120 @@
+/* Center the form box */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  /* Container for the form */
+  .form-container {
+    border: 2px solid green;
+    background-color: white;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Form inputs */
+  label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+
+  /* Apply to both button and input[type=submit] */
+button,
+input[type="submit"] {
+  padding: 10px;
+  width: 100%;             /* Make the button full width */
+  max-width: 200px;        /* Optional: control max width */
+  background-color: #73b375;
+  border: none;
+  border-radius: 4px;
+  color: black !important; /* Force black text */
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+  
+  input[type="submit"]:hover {
+    opacity: 0.9;
+  }
+  
+  /* Center title and error */
+  .title,
+  .error-message {
+    text-align: center;
+  }
+  
+  /* Navbar cleanup */
+  .navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .navbar li {
+    display: inline;
+  }
+  
+  /* Table with black borders */
+  .book-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .book-table th,
+  .book-table td {
+    border: 1px solid black; /* changed to black */
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .book-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+
+  /* NEW: Expand the container */
+.table-container {
+    width: 100%;
+    max-width: 1200px; /* Increase this for wider tables */
+    margin: 0 auto;    /* Center the table on the page */
+     margin-top: 320px;
+    padding: 0 20px;   /* Optional: add some side padding */
+  }
+  
+  /* Ensure table fills the container */
+  .book-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    table-layout: fixed; /* Optional: control column widths */
+  }

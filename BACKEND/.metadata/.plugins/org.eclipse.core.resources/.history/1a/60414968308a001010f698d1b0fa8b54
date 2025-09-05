@@ -1,0 +1,15 @@
+package com.practice.cicd;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class PracticeworkspaceApplication 
+{
+
+	public static void main(String[] args) {
+		SpringApplication.run(PracticeworkspaceApplication.class, args);
+		System.out.println("My Practice...!!!");
+	}
+
+}
