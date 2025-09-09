@@ -48,11 +48,11 @@ export default function ViewAllBooks() {
     }
   };
 
-
   const startEdit = (book) => {
     setEditId(book.id);
     setEditData({ ...book });
   };
+
   const cancelEdit = () => {
     setEditId(null);
     setEditData({ id: "", name: "", author: "", edition: "" });
@@ -72,6 +72,7 @@ export default function ViewAllBooks() {
       toast.error("Failed to update book!");
     }
   };
+
   const getBookById = async () => {
     try {
       const res = await axios.get(`${config.url}/display?bid=${Number(idToFetch)}`);
@@ -101,16 +102,14 @@ export default function ViewAllBooks() {
           value={idToFetch}
           onChange={(e) => setIdToFetch(e.target.value)}
         />
-        <button onClick={getBookById}>FIND</button>
+        <button onClick={getBookById}>Fetch</button>
       </div>
       {message && <p className="error-message">{message}</p>}
 
       {fetchedBook && (
         <div className="book-details">
           <h4>Book Found</h4>
-          <pre>
-            {JSON.stringify(fetchedBook, null, 2)}
-          </pre>
+          <pre>{JSON.stringify(fetchedBook, null, 2)}</pre>
         </div>
       )}
 
@@ -135,7 +134,7 @@ export default function ViewAllBooks() {
                 {editId === bk.id ? (
                   <>
                     <td>
-                      <input type="text" value={editData.id} />
+                      <input type="text" value={editData.id} readOnly />
                     </td>
                     <td>
                       <input
