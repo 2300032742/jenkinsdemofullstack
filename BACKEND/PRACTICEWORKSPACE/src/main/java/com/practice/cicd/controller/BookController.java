@@ -20,7 +20,7 @@ import com.practice.cicd.model.Book;
 import com.practice.cicd.service.BookService;
 
 @RestController
-@RequestMapping("/springbootbookapi")
+//@RequestMapping("/bookapi")
 @CrossOrigin("*")
 public class BookController
 {
